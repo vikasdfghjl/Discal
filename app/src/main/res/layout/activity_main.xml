@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/discount_calculator"
-        android:fontFamily="serif-monospace"
+        android:fontFamily="@font/rubik_light"
         android:fontFeatureSettings="true"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -33,7 +33,6 @@
         app:helperTextEnabled="true"
         app:helperText="Enter Selling Price"
         app:startIconDrawable="@drawable/rupee"
-        
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
