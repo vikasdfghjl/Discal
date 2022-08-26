@@ -30,9 +30,10 @@
         android:id="@+id/textField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/teal_200"
         app:helperTextEnabled="true"
+        android:layout_margin="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:endIconMode="clear_text"
         app:helperText="Enter Selling Price"
         app:helperTextTextColor="@color/black"
         app:startIconDrawable="@drawable/rupee"
@@ -62,6 +63,8 @@
         app:helperTextEnabled="true"
         app:helperText="Do not include %"
         app:helperTextTextColor="@color/black"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        app:endIconMode="clear_text"
         app:startIconDrawable="@drawable/discount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -83,23 +86,22 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-
     <Button
         android:id="@+id/button"
         style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:backgroundTint="#B9FFF8"
+        android:fontFamily="@font/rubik_medium"
         android:text="@string/calculate"
         android:textSize="25sp"
-        android:fontFamily="@font/rubik_medium"
-        android:backgroundTint="#B9FFF8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.545" />
+        app:layout_constraintVertical_bias="0.609" />
 
     <TextView
         android:id="@+id/result"
@@ -107,8 +109,6 @@
         android:fontFamily="@font/poppins_extrabold"
         android:textColor="@color/black"
         android:textAlignment="center"
-        android:layout_margin="10dp"
-        android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
