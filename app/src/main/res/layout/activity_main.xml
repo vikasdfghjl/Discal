@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="10dp"
+    android:background="@drawable/gradient_bg8"
     android:padding="10dp"
     tools:context=".MainActivity">
 
@@ -13,7 +13,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/discount_calculator"
-        android:fontFamily="@font/rubik_light"
+        android:fontFamily="@font/rubik_medium"
         android:fontFeatureSettings="true"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -81,10 +81,14 @@
 
     <Button
         android:id="@+id/button"
+        style="@style/Widget.Material3.Button.ElevatedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="54dp"
+        android:layout_marginTop="10dp"
         android:text="@string/calculate"
+        android:textSize="25sp"
+        android:fontFamily="@font/rubik_medium"
+        android:backgroundTint="#B9FFF8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.534"
@@ -95,6 +99,7 @@
     <TextView
         android:id="@+id/result"
         android:textSize="40sp"
+        android:fontFamily="@font/rubik_light"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
