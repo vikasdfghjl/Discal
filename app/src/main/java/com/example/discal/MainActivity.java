@@ -11,8 +11,8 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    private EditText editText;
-    private EditText editText2;
+    private EditText sp;
+    private EditText disc;
     private TextView result;
 
     @Override
@@ -20,11 +20,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Button button = (Button) findViewById(R.id.button);
-        editText = (EditText) findViewById(R.id.editText);
-        editText2 = (EditText) findViewById(R.id.editText2);
+        sp = (EditText) findViewById(R.id.sellingPrice);
+        disc = (EditText) findViewById(R.id.discount);
         result = (TextView) findViewById(R.id.result);
 
-        findViewById(R.id.editText).setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.sellingPrice).setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -32,11 +32,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.editText2).setOnClickListener(new View.OnClickListener(){
+        findViewById(R.id.discount).setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
-                discount();
+                Discount();
             }
         });
 
@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calculate();
+                Calculate();
 
             }
 
@@ -58,16 +58,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    private void calculate() {
+    private void Calculate() {
 
-        int res = Integer.parseInt(editText.getText().toString()) * Integer.parseInt(editText2.getText().toString())/100;
-        int ress = Integer.parseInt(editText.getText().toString()) - res;
+        int res = Integer.parseInt(sp.getText().toString()) * Integer.parseInt(disc.getText().toString())/100;
+        int ress = Integer.parseInt(sp.getText().toString()) - res;
         String r = Integer.toString(ress);
         result.setText(r);
     }
 
-    private void discount() {
-        final String discount = editText2.getText().toString().trim();
+    private void Discount() {
+        final String discount = disc.getText().toString().trim();
 
 
         if(discount.isEmpty()){
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void sellingPrice() {
-    final String price = editText.getText().toString().trim();
+    final String price = sp.getText().toString().trim();
 
 
     if(price.isEmpty()){
