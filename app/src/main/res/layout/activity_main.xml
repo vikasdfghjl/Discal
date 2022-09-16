@@ -5,34 +5,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradient_bg7"
-    android:padding="10dp"
     android:gravity="center_horizontal"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/title"
+        style="@style/TextAppearance.Material3.TitleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.Material3.TitleLarge"
-        android:text="@string/discount_calculator"
         android:fontFamily="@font/rubik_medium"
-        android:textColor="@color/black"
         android:fontFeatureSettings="true"
+        android:text="@string/discount_calculator"
+        android:textColor="@color/black"
         android:textSize="30sp" />
-
-
 
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:helperTextEnabled="true"
         android:layout_margin="10dp"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         app:endIconMode="clear_text"
         app:helperText="Enter Selling Price"
+        app:helperTextEnabled="true"
         app:helperTextTextColor="@color/black"
         app:startIconDrawable="@drawable/rupee">
 
@@ -48,23 +46,23 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField2"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:backgroundTint="@color/teal_200"
-        app:helperTextEnabled="true"
-        app:helperText="Do not include %"
-        app:helperTextTextColor="@color/black"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
         app:endIconMode="clear_text"
+        app:helperText="Do not include %"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="@color/black"
         app:startIconDrawable="@drawable/discount">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/discount"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="number"
             android:hint="@string/discount"
+            android:inputType="number"
             android:textColorHint="@color/black"
 
             />
@@ -79,18 +77,18 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:backgroundTint="#2196F3"
-        android:textColor="@color/white"
         android:fontFamily="@font/rubik_medium"
         android:text="@string/calculate"
+        android:textColor="@color/white"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/result"
-        android:textSize="50sp"
-        android:fontFamily="@font/poppins_extrabold"
-        android:textColor="@color/black"
-        android:textAlignment="center"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_extrabold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="50sp" />
 
 </LinearLayout>
