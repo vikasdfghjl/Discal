@@ -4,23 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient_bg7"
-    android:gravity="center_horizontal"
+    android:background="@color/white"
     android:orientation="vertical"
-    android:padding="10dp"
+    android:padding="8dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/title"
-        style="@style/TextAppearance.Material3.TitleLarge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/rubik_medium"
-        android:fontFeatureSettings="true"
-        android:text="@string/discount_calculator"
-        android:textColor="@color/black"
-        android:textSize="30sp" />
 
+
+
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/TextAppearance.Material3.TitleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/rubik_medium"
+            android:textStyle="bold"
+            android:fontFeatureSettings="true"
+            android:textAlignment="center"
+            android:text="@string/discount_calculator"
+            android:textColor="@color/black"
+            android:textSize="40sp" />
+
+
+
+
+
+<com.google.android.material.card.MaterialCardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="25dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_bg7">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textField"
@@ -32,6 +51,10 @@
         app:helperText="Enter Selling Price"
         app:helperTextEnabled="true"
         app:helperTextTextColor="@color/black"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusBottomEnd="25dp"
         app:startIconDrawable="@drawable/rupee">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -55,6 +78,10 @@
         app:helperText="Do not include %"
         app:helperTextEnabled="true"
         app:helperTextTextColor="@color/black"
+        app:boxCornerRadiusBottomStart="25dp"
+        app:boxCornerRadiusBottomEnd="25dp"
+        app:boxCornerRadiusTopStart="25dp"
+        app:boxCornerRadiusTopEnd="25dp"
         app:startIconDrawable="@drawable/discount">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -68,20 +95,22 @@
             />
 
     </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
+</com.google.android.material.card.MaterialCardView>
 
-    <Button
-        android:id="@+id/button"
-        style="@style/Widget.Material3.Button.ElevatedButton"
-        android:layout_width="wrap_content"
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:backgroundTint="#2196F3"
-        android:fontFamily="@font/rubik_medium"
-        android:text="@string/calculate"
-        android:textColor="@color/white"
-        android:textSize="25sp" />
+        app:cardCornerRadius="25dp"
+        android:layout_margin="8dp">
 
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/gradient_bg7">
     <TextView
         android:id="@+id/result"
         android:layout_width="match_parent"
@@ -90,5 +119,23 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="50sp" />
+
+    <Button
+        android:id="@+id/button"
+        style="@style/Widget.Material3.Button.ElevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="#62D2C3"
+        android:fontFamily="@font/rubik_medium"
+        android:text="@string/calculate"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
 
 </LinearLayout>
