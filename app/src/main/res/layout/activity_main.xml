@@ -50,7 +50,7 @@
         app:endIconMode="clear_text"
         app:helperText="Enter Selling Price"
         app:helperTextEnabled="true"
-        app:helperTextTextColor="@color/black"
+        app:helperTextTextColor="@color/white"
         app:boxCornerRadiusTopStart="25dp"
         app:boxCornerRadiusTopEnd="25dp"
         app:boxCornerRadiusBottomStart="25dp"
@@ -62,8 +62,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/selling_price"
+            android:textColorHighlight="@color/white"
             android:inputType="number"
-            android:textColorHint="@color/black" />
+            android:textColorHint="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -77,7 +78,7 @@
         app:endIconMode="clear_text"
         app:helperText="Do not include %"
         app:helperTextEnabled="true"
-        app:helperTextTextColor="@color/black"
+        app:helperTextTextColor="@color/white"
         app:boxCornerRadiusBottomStart="25dp"
         app:boxCornerRadiusBottomEnd="25dp"
         app:boxCornerRadiusTopStart="25dp"
@@ -117,7 +118,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_extrabold"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="50sp" />
 
     <Button
